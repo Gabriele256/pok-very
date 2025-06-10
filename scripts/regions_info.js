@@ -23,7 +23,7 @@ function getRegionColor(region) {
 }
 
 function setBodyBackground(region) {
-    document.body.style.backgroundImage = `url("/assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0vh, ${getRegionColor(region)} 0%, transparent 50vw)`;
+    document.body.style.backgroundImage = `url("assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0vh, ${getRegionColor(region)} 0%, transparent 50vw)`;
     document.body.style.backgroundSize = '25%, cover';
     document.body.style.backgroundRepeat = 'no-repeat, no-repeat';
     document.body.style.backgroundPosition = '-180px -80px, right top';
@@ -128,7 +128,7 @@ function setAllInfo(region) {
 
     genEl.innerHTML = capitalize(region.main_generation.name.split('-')[0] + ' ' + romanToDecimal(region.main_generation.name.split('-')[1]))
 
-    map.src = "/assets/maps/" + region.name.toLowerCase() + ".png";
+    map.src = "assets/maps/" + region.name.toLowerCase() + ".png";
     map.addEventListener("click", () => {
         openModal(map.src);
     })
@@ -144,7 +144,7 @@ function populateGymLeadersList(region) {
         container.classList.toggle("hide");
     });
 
-    fetch(`/assets/json/gym_leaders.json`)
+    fetch(`assets/json/gym_leaders.json`)
         .then(response => {
             if (!response.ok) throw new Error("Regione non trovata");
             return response.json();
@@ -172,7 +172,7 @@ function createGymLeaders(gymLeaders) {
         type.classList.add("gym-leader-type");
 
         container.style.background = `radial-gradient(circle at 100% 0%, ${getTypeColor(gymLeader.type)} 0%, transparent 50%)`;
-        type.src = `/assets/types_icons/${gymLeader.type}_icon.png`;
+        type.src = `assets/types_icons/${gymLeader.type}_icon.png`;
 
         name.textContent = gymLeader.name
         type.textContent = gymLeader.type

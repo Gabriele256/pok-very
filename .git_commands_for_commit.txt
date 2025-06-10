@@ -1,8 +1,0 @@
-cd Desktop/PokEvery/
-git init
-git remote add origin https://github.com/Gabriele256/pok-
-git config --global user.email "gabrielerossi256@gmail.com"
-git config --global user.name "Gabriele256"
-git add .
-git commit -m "messaggio a caso"
-git push origin master --force

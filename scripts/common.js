@@ -13,7 +13,7 @@ for (const [id, path] of Object.entries(navigationMap)) {
     const element = document.getElementById(id);
     if (element) {
         element.addEventListener("click", () => {
-            window.location.href = `index.html`;
+            window.location.href = path;
         });
     }
 }

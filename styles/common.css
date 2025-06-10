@@ -70,6 +70,69 @@ header {
     cursor: pointer;
 }
 
+#hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1000;
+}
+
+#hamburger-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Stile per il menu su mobile */
+@media (max-width: 660px) {
+    #header-ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #header-ul.active {
+        right: 0;
+    }
+
+    .header-ul-element {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #hamburger-btn {
+        display: block;
+    }
+
+    /* Animazione per l'hamburger quando il menu è aperto */
+    #hamburger-btn.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #hamburger-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger-btn.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
 /* 
 
 Desktop

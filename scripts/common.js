@@ -26,8 +26,8 @@ function formatPokemonName(name) {
 
     // Lista di suffissi che indicano forme (non parte del nome base)
     const formSuffixes = [
-        'mega', 'mega-x', 'mega-y', 'gmax', 'alola', 'galar', 
-        'hisui', 'paldea', 'f', 'm', 'fan', 'heat', 'wash', 
+        'mega', 'mega-x', 'mega-y', 'gmax', 'alola', 'galar',
+        'hisui', 'paldea', 'f', 'm', 'fan', 'heat', 'wash',
         'frost', 'mow', 'original', 'attack', 'defense', 'speed',
         'overcast', 'sky', 'land', 'water', 'fire', 'ice', 'grass',
         'fighting', 'poison', 'ground', 'flying', 'psychic', 'bug',
@@ -40,8 +40,8 @@ function formatPokemonName(name) {
     const suffix = parts.slice(1).join('-');
 
     // Controlla se il suffisso è un indicatore di forma
-    const isForm = formSuffixes.includes(suffix) || 
-                  formSuffixes.some(form => suffix.startsWith(form + '-'));
+    const isForm = formSuffixes.includes(suffix) ||
+        formSuffixes.some(form => suffix.startsWith(form + '-'));
 
     if (isForm) {
         // Gestione delle forme speciali
@@ -81,10 +81,29 @@ function getFormTypeInfo(pokemonName) {
         return { text: "Gigantamax", color: "#8A2BE2" }; // Blu per Gmax
     } else if (pokemonName.includes("-totem")) {
         return { text: "Alola Totem", color: "#228B22" }; // Blu per Totem
-    } else if (pokemonName.includes("-alola") || pokemonName.includes("-galar") || 
-               pokemonName.includes("-hisui") || pokemonName.includes("-paldea")) {
-        const regionName = pokemonName.split('-').pop(); 
+    } else if (pokemonName.includes("-alola") || pokemonName.includes("-galar") ||
+        pokemonName.includes("-hisui") || pokemonName.includes("-paldea")) {
+        const regionName = pokemonName.split('-').pop();
         return { text: `${capitalize(regionName)} Form`, color: "#4682B4" }; // Viola per le forme regionali
     }
     return { text: "Special Form", color: "#696969" }; // Colore di default
 }
+
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const headerUl = document.getElementById('header-ul');
+
+hamburgerBtn.addEventListener('click', function () {
+    this.classList.toggle('active');
+    headerUl.classList.toggle('active');
+});
+
+// Chiudi il menu quando si clicca su un link (opzionale)
+const navItems = document.querySelectorAll('.header-ul-element');
+navItems.forEach(item => {
+    item.addEventListener('click', function () {
+        if (window.innerWidth <= 660) {
+            hamburgerBtn.classList.remove('active');
+            headerUl.classList.remove('active');
+        }
+    });
+});

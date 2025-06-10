@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="shortcut icon" href="assets/logo/pokeball.png" type="image/x-icon">
+    <title>PokÉvery</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="assets/logo/logo.png" alt="Logo Image" id="header-logo">
+        <ul id="header-ul">
+            <li class="header-ul-element" id="header-pokedex">Pokédex</li>
+            <li class="header-ul-element" id="header-regions">Regions</li>
+            <li class="header-ul-element" id="header-types">Types</li>
+            <li class="header-ul-element" id="header-abilities">Abilities</li>
+            <li class="header-ul-element" id="header-items">Items</li>
+            <li class="header-ul-element" id="header-berries">Berries</li>
+            <li class="header-ul-element" id="header-moves">Moves</li>
+        </ul>
+    </header>
+    <section id="left-section">
+        <div id="search-div">
+            <input type="text" name="search_bar" id="search-bar" placeholder="Search...">
+            <button id="search"><img src="assets/magnify_glass.png" alt="Search" id="search-img"></button>
+        </div>
+        <div id="pokedex-table"></div>
+        <div id="loader">Caricamento...</div>
+    </section>
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/common.js"></script>
+</body>
+
+</html>

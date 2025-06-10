@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/pokemon_info.css">
+    <link rel="shortcut icon" href="assets/logo/pokeball.png" type="image/x-icon">
+    <title></title>
+</head>
+
+<body>
+    <header>
+        <img src="assets/logo/logo.png" alt="Logo Image" id="header-logo">
+        <ul id="header-ul">
+            <li class="header-ul-element" id="header-pokedex">Pokédex</li>
+            <li class="header-ul-element" id="header-regions">Regions</li>
+            <li class="header-ul-element" id="header-types">Types</li>
+            <li class="header-ul-element" id="header-abilities">Abilities</li>
+            <li class="header-ul-element" id="header-items">Items</li>
+            <li class="header-ul-element" id="header-berries">Berries</li>
+            <li class="header-ul-element" id="header-moves">Moves</li>
+        </ul>
+    </header>
+    
+    <main>
+        <section id="left-section">
+            <div id="name-number-container">
+                <div id="name-container">
+                    <p id="name"></p>
+                </div>
+                <div id="number-container">
+                    <p id="number"></p>
+                </div>
+            </div>
+            <p id="description"></p>
+            <div id="height-weight-container">
+                <div id="height-container" class="box-weight-height">
+                    <p class="characteristics-title">Height</p>
+                    <p id="height"></p>
+                </div>
+                <div id="weight-container" class="box-weight-height">
+                    <p class="characteristics-title">Weight</p>
+                    <p id="weight"></p>
+                </div>
+            </div>
+            <div id="abilities-container"></div>
+            <div id="stats-container">
+                <div id="HP-container" class="stat-containers">
+                    <p class="stat-title" id="HP-title">HP</p>
+                    <p class="stat"></p>
+                </div>
+                <div id="ATK-container" class="stat-containers">
+                    <p class="stat-title" id="ATK-title">ATK</p>
+                    <p class="stat"></p>
+                </div>
+                <div id="DEF-container" class="stat-containers">
+                    <p class="stat-title" id="DEF-title">DEF</p>
+                    <p class="stat"></p>
+                </div>
+                <div id="SpA-container" class="stat-containers">
+                    <p class="stat-title" id="SpA-title">SpA</p>
+                    <p class="stat"></p>
+                </div>
+                <div id="SpD-container" class="stat-containers">
+                    <p class="stat-title" id="SpD-title">SpD</p>
+                    <p class="stat"></p>
+                </div>
+                <div id="SPD-container" class="stat-containers">
+                    <p class="stat-title" id="SPD-title">SPD</p>
+                    <p class="stat"></p>
+                </div>
+                <div id="TOT-container" class="stat-containers">
+                    <p class="stat-title" id="TOT-title">TOT</p>
+                    <p class="stat"></p>
+                </div>
+            </div>
+        </section>
+        <section id="right-section">
+            <img id="pokemon-img" src="" alt="Pokemon Image">
+
+            <div id="types-container">
+                <p class="type-container"></p>
+                <p class="type-container"></p>
+            </div>
+            <div id="evolutions-container">
+            </div>
+        </section>
+    </main>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/pokemon_info.js"></script>
+</body>
+
+</html>

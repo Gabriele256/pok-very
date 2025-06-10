@@ -1,0 +1,147 @@
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vh;
+}
+
+p {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    padding-top: 0;
+}
+
+#name {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#icon {
+    align-self: center;
+}
+
+#damage-class-container {
+    display: block;
+    width: fit-content;
+    padding: 1% 2%;
+    margin: 3% auto 0 auto;
+    background-color: var(--background-pokemon-container);
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.left-p-text {
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 4%;
+    cursor: pointer;
+}
+
+.damage-titles {
+    font-size: small;
+    margin-top: 2%;
+}
+
+.damage-tables {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0.3em;
+}
+
+.damage-type {
+    color: var(--type-text);
+    border-radius: 20px;
+    padding: 1.5% 2%;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.main-div-off-def {
+    background-color: var(--background-pokemon-container);
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    padding: 2%;
+    margin-top: 2%;
+    width: 50%;
+    justify-self: center;
+}
+
+.table-containers {
+    background-color: var(--background-pokemon-container);
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    padding: 2% 2% 0 2%;
+    margin-bottom: 2%;
+    width: 50%;
+    align-self: center;
+}
+
+#moves-table-container {
+    margin-top: 2%;
+}
+
+.pokemon-container,
+.move-container {
+    background-color: var(--background-pokemon-container);
+    padding: 2% 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--separator);
+}
+
+.number-pokemon,
+.number-move {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.img-pokemon,
+.category-move {
+    width: 12%;
+    justify-self: flex-end;
+}
+
+.category-move {
+    width: 17%;
+}
+
+.name-pokemon,
+.name-move {
+    width: calc(100% - 20% - 12%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.name-move {
+    width: calc(100% - 20% - 17%);
+}
+
+.name-pokemon::before,
+.name-move::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 40px;
+    background-color: var(--separator);
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/regions_info.css">
+    <link rel="shortcut icon" href="assets/logo/pokeball.png" type="image/x-icon">
+    <title></title>
+</head>
+
+<body>
+    <header>
+        <img src="assets/logo/logo.png" alt="Logo Image" id="header-logo">
+        <ul id="header-ul">
+            <li class="header-ul-element" id="header-pokedex">Pokédex</li>
+            <li class="header-ul-element" id="header-regions">Regions</li>
+            <li class="header-ul-element" id="header-types">Types</li>
+            <li class="header-ul-element" id="header-abilities">Abilities</li>
+            <li class="header-ul-element" id="header-items">Items</li>
+            <li class="header-ul-element" id="header-berries">Berries</li>
+            <li class="header-ul-element" id="header-moves">Moves</li>
+        </ul>
+    </header>
+
+    <div class="sfumatura-overlay"></div>
+
+    <main>
+        <section>
+            <div id="name-gen-container">
+                <p id="name"></p>
+                <p id="gen"></p>
+            </div>
+
+            <img id="map" src="" alt="Region Map">
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modal-image" />
+            </div>
+           
+            <div class="extendable">
+                <p id="pokedex-extandable">Pokédex
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"
+                        style="vertical-align: middle;">
+                        <path
+                            d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                            fill="#0F0F0F" />
+                    </svg>
+                </p>
+                <div id="pokedex-container" class="hide"></div>
+            </div>
+        </section>
+        <section>
+            <div class="extendable">
+                <p>Paths
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"
+                        style="vertical-align: middle;">
+                        <path
+                            d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                            fill="#0F0F0F" />
+                    </svg>
+                </p>
+            </div>
+            <div class="extendable">
+                <p>Cities
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"
+                        style="vertical-align: middle;">
+                        <path
+                            d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                            fill="#0F0F0F" />
+                    </svg>
+                </p>
+            </div>
+            <div class="extendable">
+                <p id="gym-leaders-p">Gym Leaders
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"
+                        style="vertical-align: middle;">
+                        <path
+                            d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                            fill="#0F0F0F" />
+                    </svg>
+                </p>
+                <div id="gym-leaders-container" class="hide"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/regions_info.js"></script>
+    <script src="scripts/common.js"></script>
+</body>
+
+</html>

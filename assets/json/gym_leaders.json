@@ -1,0 +1,93 @@
+{
+  "kanto": [
+    { "name": "Brock", "type": "rock" },
+    { "name": "Misty", "type": "water" },
+    { "name": "Lt. Surge", "type": "electric" },
+    { "name": "Erika", "type": "grass" },
+    { "name": "Koga", "type": "poison" },
+    { "name": "Sabrina", "type": "psychic" },
+    { "name": "Blaine", "type": "fire" },
+    { "name": "Giovanni", "type": "ground" }
+  ],
+  "johto": [
+    { "name": "Falkner", "type": "flying" },
+    { "name": "Bugsy", "type": "bug" },
+    { "name": "Whitney", "type": "normal" },
+    { "name": "Morty", "type": "ghost" },
+    { "name": "Chuck", "type": "fighting" },
+    { "name": "Jasmine", "type": "steel" },
+    { "name": "Pryce", "type": "ice" },
+    { "name": "Clair", "type": "dragon" }
+  ],
+  "hoenn": [
+    { "name": "Roxanne", "type": "rock" },
+    { "name": "Brawly", "type": "fighting" },
+    { "name": "Wattson", "type": "electric" },
+    { "name": "Flannery", "type": "fire" },
+    { "name": "Norman", "type": "normal" },
+    { "name": "Winona", "type": "flying" },
+    { "name": "Tate & Liza", "type": "psychic" },
+    { "name": "Wallace", "type": "water" }
+  ],
+  "sinnoh": [
+    { "name": "Roark", "type": "rock" },
+    { "name": "Gardenia", "type": "grass" },
+    { "name": "Maylene", "type": "fighting" },
+    { "name": "Crasher Wake", "type": "water" },
+    { "name": "Fantina", "type": "ghost" },
+    { "name": "Byron", "type": "steel" },
+    { "name": "Candice", "type": "ice" },
+    { "name": "Volkner", "type": "electric" }
+  ],
+  "unova": [
+    { "name": "Cilan", "type": "grass" },
+    { "name": "Chili", "type": "fire" },
+    { "name": "Cress", "type": "water" },
+    { "name": "Lenora", "type": "normal" },
+    { "name": "Burgh", "type": "bug" },
+    { "name": "Elesa", "type": "electric" },
+    { "name": "Clay", "type": "ground" },
+    { "name": "Skyla", "type": "flying" },
+    { "name": "Brycen", "type": "ice" },
+    { "name": "Drayden", "type": "dragon" }
+  ],
+  "kalos": [
+    { "name": "Viola", "type": "bug" },
+    { "name": "Grant", "type": "rock" },
+    { "name": "Korrina", "type": "fighting" },
+    { "name": "Ramos", "type": "grass" },
+    { "name": "Clemont", "type": "electric" },
+    { "name": "Valerie", "type": "fairy" },
+    { "name": "Olympia", "type": "psychic" },
+    { "name": "Wulfric", "type": "ice" }
+  ],
+  "alola": [
+    { "name": "Ilima", "type": "normal" },
+    { "name": "Mallow", "type": "grass" },
+    { "name": "Lana", "type": "water" },
+    { "name": "Kiawe", "type": "fire" },
+    { "name": "Sophocles", "type": "electric" },
+    { "name": "Nanu", "type": "dark" },
+    { "name": "Hala", "type": "fighting" }
+  ],
+  "galar": [
+    { "name": "Milo", "type": "grass" },
+    { "name": "Nessa", "type": "water" },
+    { "name": "Kabu", "type": "fire" },
+    { "name": "Bea", "type": "fighting" },
+    { "name": "Allister", "type": "ghost" },
+    { "name": "Opal", "type": "fairy" },
+    { "name": "Gordie", "type": "rock" },
+    { "name": "Melony", "type": "ice" }
+  ],
+  "paldea": [
+    { "name": "Kofu", "type": "water" },
+    { "name": "Brassius", "type": "grass" },
+    { "name": "Katy", "type": "bug" },
+    { "name": "Tulip", "type": "psychic" },
+    { "name": "Ryme", "type": "ghost" },
+    { "name": "Atticus", "type": "poison" },
+    { "name": "Raihan", "type": "dragon" },
+    { "name": "Grusha", "type": "ice" }
+  ]
+}

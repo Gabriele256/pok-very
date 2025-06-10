@@ -23,7 +23,7 @@ function getTypeColor(type) {
 }
 
 function setBodyBackground(type) {
-    document.body.style.backgroundImage = `url("/assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0vh, ${getTypeColor(type)} 0%, transparent 50vw)`;
+    document.body.style.backgroundImage = `url("assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0vh, ${getTypeColor(type)} 0%, transparent 50vw)`;
     document.body.style.backgroundSize = '25%, cover';
     document.body.style.backgroundRepeat = 'no-repeat, no-repeat';
     document.body.style.backgroundPosition = '-180px -80px, right top';
@@ -72,7 +72,7 @@ function appendTypeElements(id, types) {
         el.addEventListener("click", () => {
             const urlParts = t.url.split('/').filter(Boolean); // rimuove stringhe vuote
             const id = urlParts[urlParts.length - 1];
-            window.location.href = `/types_info.html?type=${id}`;
+            window.location.href = `types_info.html?type=${id}`;
         });
         container.appendChild(el);
     });
@@ -165,7 +165,7 @@ function populatePokemonList(pokemonArray) {
 
         div.addEventListener("click", () => {
             // reindirizza a una pagina personalizzata se la vuoi creare, es. `pokemon_info.html`
-            window.location.href = `/pokemon_info.html?pokemon=${entry.pokemon.name}`;
+            window.location.href = `pokemon_info.html?pokemon=${entry.pokemon.name}`;
         });
 
         div.appendChild(numberP)
@@ -223,7 +223,7 @@ function populateMoveList(movesArray) {
 
         div.addEventListener("click", () => {
             // reindirizza a una pagina personalizzata se la vuoi creare, es. `move_info.html`
-            window.location.href = `/move_info.html?name=${move.name}`;
+            window.location.href = `move_info.html?name=${move.name}`;
         });
 
 

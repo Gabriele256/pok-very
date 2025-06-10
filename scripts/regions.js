@@ -1,24 +1,3 @@
-/*
-
-<div class="region-container">
-            <p class="region-name"></p>
-            <img src="" alt="" class="region-img">
-            <div class="starters">
-                <img src="" alt="" class="startetr-grass">
-                <img src="" alt="" class="startetr-fire">
-                <img src="" alt="" class="startetr-water">
-            </div>
-        </div>
-
-const main_div = document.createElement("div")
-const region_name = document.createElement("p")
-const starter_container = document.createElement("div")
-const starter_grass = document.createElement("img")
-const starter_fire = document.createElement("img")
-const starter_water = document.createElement("img")
-
-*/
-
 function getregionColor(region) {
     const colors = {
         water: "#5090D6",
@@ -80,7 +59,7 @@ async function loadPokemonregions() {
         const data = await response.json();
 
         // JSON locale con i nomi dei 3 starter per regione
-        const startersData = await fetch('/assets/json/starters.json').then(r => r.json());
+        const startersData = await fetch('assets/json/starters.json').then(r => r.json());
 
         container.innerHTML = "";
 
@@ -104,7 +83,7 @@ async function loadPokemonregions() {
             starter_fire.className = "starter-fire";
             starter_water.className = "starter-water";
 
-            main_div.style.backgroundImage = `url(/assets/regions/${region.name.toLowerCase()}.png)`;
+            main_div.style.backgroundImage = `url(assets/regions/${region.name.toLowerCase()}.png)`;
 
             main_div.addEventListener("click", () => {
                 window.location.href = `regions_info.html?region=${id}`;

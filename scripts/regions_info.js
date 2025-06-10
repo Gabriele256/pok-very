@@ -199,7 +199,7 @@ function createPokemonCard(pokemon) {
     img.src = pokemon.sprites.front_default;
 
     const typeName = pokemon.types[0].type.name;
-    img.style.backgroundImage = `url("/assets/types_icons/${typeName}_icon.png")`;
+    img.style.backgroundImage = `url("assets/types_icons/${typeName}_icon.png")`;
     container.style.background = "radial-gradient(circle at 100% 0%, " + getTypeColor(typeName.toLowerCase()) + " 0%, transparent 40%),#f8f8f8"
 
 

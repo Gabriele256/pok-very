@@ -35,7 +35,7 @@ if (pokemonIdentifier) {
 function setBodyBackground(data) {
     const typeColor = getTypeColor(data.types[0].type.name.toLowerCase());
 
-    document.body.style.backgroundImage = `url("/assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0%, ${typeColor} 0%, transparent 50vw)`;
+    document.body.style.backgroundImage = `url("assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0%, ${typeColor} 0%, transparent 50vw)`;
     document.body.style.backgroundSize = '25%, cover';
     document.body.style.backgroundRepeat = 'no-repeat, no-repeat';
     document.body.style.backgroundPosition = '-180px -80px, right top';
@@ -78,7 +78,7 @@ async function loadPokemon(pokemonIdentifier) {
             p.addEventListener("click", () => {
                 const urlParts = t.type.url.split('/').filter(Boolean);
                 const id = urlParts[urlParts.length - 1];
-                window.location.href = `/types_info.html?type=${id}`;
+                window.location.href = `types_info.html?type=${id}`;
             });
             typesContainer.appendChild(p);
         });
@@ -185,7 +185,7 @@ async function loadEvolutionSprites(evolutionData) {
         img.title = formatPokemonName(node.species.name);
         img.classList.add("evolution-img");
         img.addEventListener("click", () => {
-            window.location.href = `/pokemon_info.html?pokemon=${pokeData.id}`;
+            window.location.href = `pokemon_info.html?pokemon=${pokeData.id}`;
         });
         baseForm.appendChild(img);
         mainFormsContainer.appendChild(baseForm);
@@ -215,7 +215,7 @@ async function loadEvolutionSprites(evolutionData) {
             regionalImg.title = formatPokemonName(regionalForm.pokemon.name);
             regionalImg.classList.add("evolution-img");
             regionalImg.addEventListener("click", () => {
-                window.location.href = `/pokemon_info.html?pokemon=${regionalPokeData.id}`;
+                window.location.href = `pokemon_info.html?pokemon=${regionalPokeData.id}`;
             });
 
             const formText = document.createElement("p");
@@ -265,7 +265,7 @@ async function loadEvolutionSprites(evolutionData) {
                 specialImg.title = formatPokemonName(specialForm.pokemon.name);
                 specialImg.classList.add("evolution-img");
                 specialImg.addEventListener("click", () => {
-                    window.location.href = `/pokemon_info.html?pokemon=${specialPokeData.id}`;
+                    window.location.href = `pokemon_info.html?pokemon=${specialPokeData.id}`;
                 });
 
                 const formText = document.createElement("p");

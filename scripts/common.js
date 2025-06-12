@@ -1,3 +1,7 @@
+const basePath = window.location.pathname.includes("POKEVERY2")
+    ? "/pok-very"
+    : "";
+
 const navigationMap = {
     "header-logo": "index.html",
     "header-pokedex": "index.html",

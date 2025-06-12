@@ -11,8 +11,7 @@ body {
     height: calc(100vh - 20px);
     margin: 0;
     padding: 20px;
-    padding-top: 0;
-    background-image: url("assets/pokeball_icon.png");
+    padding-top: 0;    
     background-size: 25%;
     background-repeat: no-repeat;
     background-position-x: -180px;

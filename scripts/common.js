@@ -13,6 +13,8 @@ const navigationMap = {
     "header-moves": "moves.html"
 };
 
+document.body.style.backgroundImage = `url("${basePath}/assets/pokeball_icon.png")`
+
 for (const [id, path] of Object.entries(navigationMap)) {
     const element = document.getElementById(id);
     if (element) {

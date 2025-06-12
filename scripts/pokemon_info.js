@@ -33,13 +33,23 @@ if (pokemonIdentifier) {
 
 
 function setBodyBackground(data) {
+
+    const isMobile = window.matchMedia("(max-width: 660px)").matches;
     const typeColor = getTypeColor(data.types[0].type.name.toLowerCase());
 
-    document.body.style.backgroundImage = `url("assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0%, ${typeColor} 0%, transparent 50vw)`;
-    document.body.style.backgroundSize = '25%, cover';
-    document.body.style.backgroundRepeat = 'no-repeat, no-repeat';
-    document.body.style.backgroundPosition = '-180px -80px, right top';
-    document.body.style.backgroundColor = '#f8f8f8';
+    if (isMobile) {
+        document.body.style.backgroundImage = `radial-gradient(circle at center top, ${typeColor} 0%, transparent 70%)`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundPosition = 'center top';
+        document.body.style.backgroundColor = '#f8f8f8';
+    } else {
+        document.body.style.backgroundImage = `url("/assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0%, ${typeColor} 0%, transparent 50vw)`;
+        document.body.style.backgroundSize = '25%, cover';
+        document.body.style.backgroundRepeat = 'no-repeat, no-repeat';
+        document.body.style.backgroundPosition = '-180px -80px, right top';
+        document.body.style.backgroundColor = '#f8f8f8';
+    }
 }
 
 async function loadPokemon(pokemonIdentifier) {
@@ -133,12 +143,12 @@ async function loadPokemon(pokemonIdentifier) {
                 genderDisplayElement.innerHTML = `<span style="color:#00BFFF;">${malePercentage}%♂</span> / <span style="color:#FF69B4;">${femalePercentage}%♀</span>`;
             }
         }
-        // --- Fine Aggiunta per il Sesso del Pokémon ---
-
 
         const evolutionResponse = await fetch(speciesData.evolution_chain.url);
         const evolutionData = await evolutionResponse.json();
         loadEvolutionSprites(evolutionData);
+        window.addEventListener('load', setBodyBackground(data));
+        window.addEventListener('resize', setBodyBackground(data));
     } catch (error) {
         console.error("Errore nel caricamento del Pokémon:", error);
     }
@@ -292,6 +302,7 @@ async function loadEvolutionSprites(evolutionData) {
             branches.style.gap = "2%";
             branches.style.justifyContent = "center";
             branches.style.marginTop = "1%";
+            branches.style.overflowX = "scroll";
 
             for (const evo of node.evolves_to) {
                 const evoDetail = evo.evolution_details[0];

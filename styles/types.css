@@ -108,6 +108,7 @@ main {
 @media (max-width: 660px) {
     #types-table {
         flex-direction: column;
+        padding-bottom: 10%;
     }
     
     .type-container {

@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 20px;
     padding-top: 0;
-    background-image: url("/assets/pokeball_icon.png");
+    background-image: url("assets/pokeball_icon.png");
     background-size: 25%;
     background-repeat: no-repeat;
     background-position-x: -180px;

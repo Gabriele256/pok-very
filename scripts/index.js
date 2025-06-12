@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(img.src0)
         
         const typeName = pokemon.types[0].type.name;
-        img.style.backgroundImage = `url("/assets/types_icons/${typeName}_icon.png")`;
+        img.style.backgroundImage = `url("./assets/types_icons/${typeName}_icon.png")`;
         container.style.background = "radial-gradient(circle at 100% 0%, " + getTypeColor(typeName.toLowerCase()) + " 0%, transparent 40%),#f8f8f8"
 
         const name = document.createElement("h3");

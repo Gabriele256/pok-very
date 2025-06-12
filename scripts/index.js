@@ -94,8 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }else{
             img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`; 
         }
-
-        console.log(img.src0)
         
         const typeName = pokemon.types[0].type.name;
         console.log(basePath)

@@ -130,7 +130,7 @@ function populatePokemonList(pokemonArray) {
     });
 
     // Ordina alfabeticamente
-    const sorted = pokemonArray.sort((a, b) => a.pokemon.name.localeCompare(b.pokemon.name));
+    const sorted = pokemonArray.sort((a, b) => a.pokemon.id > b.pokemon.id);
 
     sorted.forEach(entry => {
         const div = document.createElement("div");
@@ -188,7 +188,7 @@ function populateMoveList(movesArray) {
 
     // Ordina alfabeticamente
     const sorted = movesArray.sort((a, b) => a.name.localeCompare(b.name));
-    let i = 0;
+    let i = 1;
 
     sorted.forEach(move => {
         const div = document.createElement("div");
@@ -204,7 +204,7 @@ function populateMoveList(movesArray) {
         
         div.style.cursor = "pointer";
         numberM.textContent = i;
-        nameM.textContent = name;
+        nameM.textContent = name.replaceAll("-", " ");
 
         fetch(`https://pokeapi.co/api/v2/move/${move.name}`)
             .then(response => {

@@ -23,7 +23,7 @@ function getTypeColor(type) {
 }
 
 function setBodyBackground(type) {
-    document.body.style.backgroundImage = `url("assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0vh, ${getTypeColor(type)} 0%, transparent 50vw)`;
+    document.body.style.backgroundImage = `url("${basePath}/assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0vh, ${getTypeColor(type)} 0%, transparent 50vw)`;
     document.body.style.backgroundSize = '25%, cover';
     document.body.style.backgroundRepeat = 'no-repeat, no-repeat';
     document.body.style.backgroundPosition = '-180px -80px, right top';

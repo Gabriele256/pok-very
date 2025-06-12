@@ -59,7 +59,7 @@ async function loadPokemonregions() {
         const data = await response.json();
 
         // JSON locale con i nomi dei 3 starter per regione
-        const startersData = await fetch('assets/json/starters.json').then(r => r.json());
+        const startersData = await fetch(`${basePath}/assets/json/starters.json`).then(r => r.json());
 
         container.innerHTML = "";
 
@@ -83,7 +83,7 @@ async function loadPokemonregions() {
             starter_fire.className = "starter-fire";
             starter_water.className = "starter-water";
 
-            main_div.style.backgroundImage = `url(assets/regions/${region.name.toLowerCase()}.png)`;
+            main_div.style.backgroundImage = `url(${basePath}/assets/regions/${region.name.toLowerCase()}.png)`;
 
             main_div.addEventListener("click", () => {
                 window.location.href = `regions_info.html?region=${id}`;

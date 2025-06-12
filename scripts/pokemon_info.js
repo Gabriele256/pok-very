@@ -44,7 +44,7 @@ function setBodyBackground(data) {
         document.body.style.backgroundPosition = 'center top';
         document.body.style.backgroundColor = '#f8f8f8';
     } else {
-        document.body.style.backgroundImage = `url("/assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0%, ${typeColor} 0%, transparent 50vw)`;
+        document.body.style.backgroundImage = `url("${basePath}/assets/pokeball_icon.png"), radial-gradient(circle at 100vw 0%, ${typeColor} 0%, transparent 50vw)`;
         document.body.style.backgroundSize = '25%, cover';
         document.body.style.backgroundRepeat = 'no-repeat, no-repeat';
         document.body.style.backgroundPosition = '-180px -80px, right top';

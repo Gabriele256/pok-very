@@ -1,5 +1,3 @@
-console.log(window.location.pathname)
-
 const basePath = window.location.pathname.includes("pok-very")
     ? "/pok-very"
     : "";
